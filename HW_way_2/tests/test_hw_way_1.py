@@ -1,4 +1,4 @@
-from HW_way_1.pages.registration_page import RegistrationPage
+from HW_way_2.pages.registration_page import RegistrationPage
 
 
 

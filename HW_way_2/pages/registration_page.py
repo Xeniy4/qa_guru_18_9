@@ -1,6 +1,6 @@
 from selene import browser, command, have
 
-from HW_way_1.HW_way_1 import resources
+from HW_way_2.HW_way_1 import resources
 
 
 class RegistrationPage:
