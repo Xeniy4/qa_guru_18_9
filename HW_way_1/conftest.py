@@ -13,10 +13,6 @@ def browser_manager():
     browser.config.base_url = "https://demoqa.com"
     browser.config.window_width = 1920
     browser.config.window_height = 1080
-    browser.open('/automation-practice-form')
-    browser.driver.execute_script("$('#fixedban').remove()")
-    browser.driver.execute_script("$('footer').remove()")
-    browser.config.timeout = 30
 
     yield
 
