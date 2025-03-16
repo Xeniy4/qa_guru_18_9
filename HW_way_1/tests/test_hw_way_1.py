@@ -20,11 +20,8 @@ def test_form(browser_manager):
     registration_page.hobbies()
     registration_page.picture()
     registration_page.currentAddress('Нижний Новгород')
-
     registration_page.scroll()
-
     registration_page.state()
     registration_page.city()
     registration_page.submit()
-
     registration_page.finish_form()
