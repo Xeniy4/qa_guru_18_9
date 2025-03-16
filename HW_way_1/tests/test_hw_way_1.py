@@ -13,9 +13,7 @@ def test_form(browser_manager):
     registration_page.email('Goryaeva@mail.ru')
     registration_page.gender()
     registration_page.mobile('8910123456')
-
     registration_page.dateOfBirth('November', '11', '1995')
-
     registration_page.subject('hist')
     registration_page.hobbies()
     registration_page.picture()
