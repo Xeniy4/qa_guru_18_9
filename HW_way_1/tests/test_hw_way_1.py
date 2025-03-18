@@ -14,7 +14,7 @@ def test_form(browser_manager):
     registration_page.dateOfBirth('November', '11', '1995')
     registration_page.subject('hist')
     registration_page.hobbies()
-    registration_page.picture()
+    registration_page.picture('pic.png')
     registration_page.currentAddress('Нижний Новгород')
     registration_page.scroll()
     registration_page.state()

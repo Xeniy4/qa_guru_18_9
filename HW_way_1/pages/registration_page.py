@@ -1,4 +1,7 @@
+import os
+
 from selene import browser, command, have
+
 
 from HW_way_1.HW_way_1 import resources
 
@@ -42,8 +45,9 @@ class RegistrationPage:
     def hobbies(self):
         browser.element('#hobbies-checkbox-1').perform(command.js.click)
 
-    def picture(self):
-        browser.element('#uploadPicture').send_keys(resources.path('C:\QA\pic.png'))
+    def picture(self,path):
+        browser.element("#uploadPicture").send_keys(
+            os.path.abspath(os.path.join(os.path.dirname(__file__), f"../resources/{path}")))
 
     def currentAddress(self, value):
         browser.element('#currentAddress').type(value)
