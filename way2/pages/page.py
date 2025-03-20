@@ -1,5 +1,6 @@
 import os
 
+from pathlib import Path
 from selene import browser, by, have
 
 from way2.pages.users import User
@@ -42,8 +43,11 @@ class RegistrationPage:
     def set_hobby(self, hobby):
         browser.element(f'[for="hobbies-checkbox-1"]').click()
 
+    # def upload_picture(self, picture):
+    #     browser.element('#uploadPicture').send_keys(os.path.abspath("../resources/pic.png"))
+
     def upload_picture(self, picture):
-        browser.element('#uploadPicture').send_keys(os.path.abspath("../resources/pic.png"))
+        browser.element('#uploadPicture').send_keys(str(Path(__file__).parent.parent.joinpath(f'resources/{picture}')))
 
     def set_address(self, address, state, city):
         browser.element('#currentAddress').type(address)
